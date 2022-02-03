@@ -261,7 +261,7 @@ namespace Calculator
             // 
             // lblResult
             // 
-            this.lblResult.BackColor = System.Drawing.Color.Silver;
+            this.lblResult.BackColor = System.Drawing.Color.White;
             this.lblResult.Location = new System.Drawing.Point(12, 17);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(40, 40);
@@ -292,8 +292,10 @@ namespace Calculator
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "CALCULATOR";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

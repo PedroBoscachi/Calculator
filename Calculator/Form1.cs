@@ -48,19 +48,19 @@ namespace Calculator
             switch (operation)
             {
                 case "+":
-                    result.Text = (value + double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString();
+                    result.Text = (value + double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString(CultureInfo.InvariantCulture);
                     break;
                 case "/":
-                    result.Text = (value / double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString();
+                    result.Text = (value / double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString(CultureInfo.InvariantCulture);
                     break;
                 case "-":
-                    result.Text = (value - double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString();
+                    result.Text = (value - double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString(CultureInfo.InvariantCulture);
                     break;
                 case "X":
-                    result.Text = (value * double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString();
+                    result.Text = (value * double.Parse(result.Text, CultureInfo.InvariantCulture)).ToString(CultureInfo.InvariantCulture);
                     break;
                 case "%":
-                    result.Text = (value * (double.Parse(result.Text, CultureInfo.InvariantCulture)) / 100).ToString();
+                    result.Text = (value * (double.Parse(result.Text, CultureInfo.InvariantCulture)) / 100).ToString(CultureInfo.InvariantCulture);
                     break;
             }
 
@@ -71,6 +71,7 @@ namespace Calculator
         private void button1_Click(object sender, EventArgs e)
         {
             result.Clear();
+            lblResult.Text = "";
             value = 0;
         }
     }
